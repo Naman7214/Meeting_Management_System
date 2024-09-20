@@ -1,0 +1,27 @@
+AI-Powered Exam Assessment System Overview
+
+Date: 18th September 2024
+Participants:
+
+Naman Agnihotri (Lead Developer)
+Harshvardhan Grandhi (Project Manager)
+Dhanashri Patil (Data Scientist)
+Sanika Kharade (UX/UI Designer)
+
+
+Agenda:
+Review the current progress on OCR for handwritten text recognition.
+Discuss improvements needed in evaluating diagrams and visual content.
+Plan the integration of large language models (LLMs) for handling diverse handwriting styles.
+Review UI/UX design proposals for the student and teacher dashboards.
+Project Progress:
+The OCR engine for handwritten text is functional but requires further optimization for different handwriting styles.
+Diagram recognition accuracy is below expectations and needs additional training data.
+The integration of LLMs to handle handwriting diversity is under development but progressing well.
+The initial UI/UX designs for dashboards are ready for review.
+
+
+Open Questions:
+What additional data should be collected to improve diagram recognition accuracy?
+How should the UI/UX accommodate different user types (students vs. teachers)?
+What is the timeline for LLM integration completion?

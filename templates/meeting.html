@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class="text-3xl font-bold mb-4">Meeting: {{ meeting.title }}</h1>
+
+  <div class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Upload Documents</h2>
+    <form action="{{ url_for('upload_document', meeting_id=meeting.id) }}" method="post" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-lg">
+      <input type="file" name="document" required class="mb-4">
+      <input type="submit" value="Upload Document" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
+    </form>
+  </div>
+
+  <div class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Add Discussion Point</h2>
+    <form action="{{ url_for('add_point', meeting_id=meeting.id) }}" method="post" class="bg-white p-6 rounded-lg shadow-lg">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded-lg mb-4">
+      <textarea name="point" placeholder="Your Discussion Point" required class="w-full p-3 border rounded-lg mb-4"></textarea>
+      <input type="submit" value="Add Discussion Point" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
+    </form>
+  </div>
+
+  <div class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Generate Agenda</h2>
+    <a href="{{ url_for('generate_agenda_route', meeting_id=meeting.id) }}" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 mt-4">
+      Generate Agenda
+    </a>
+  </div>
+
+  <div class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Upload Meeting Recording</h2>
+    <form action="{{ url_for('upload_recording', meeting_id=meeting.id) }}" method="post" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-lg">
+      <input type="file" name="recording" required class="mb-4">
+      <input type="submit" value="Upload Recording" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
+    </form>
+  </div>
+
+  <div class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">Generate Summary</h2>
+    <a href="{{ url_for('generate_summary', meeting_id=meeting.id) }}" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 mt-4">
+      Generate Summary
+    </a>
+  </div>
+{% endblock %}
